@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E3B4A90-997E-4537-9B16-7C9F023DFD11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mainView</RootNamespace>
+    <AssemblyName>mainView</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main\20190706115353558_easyicon_net_64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>packages\DnsClient.1.2.0\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="ImageCombo, Version=1.1.3167.33976, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ImageCombo.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MongoDB.Bson, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Bson.2.8.1\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.2.8.1\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MongoDB.Driver.Core.2.8.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Legacy, Version=2.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\mongocsharpdriver.2.8.1\lib\net452\MongoDB.Driver.Legacy.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.6.5\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clock\alarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clock\alarm.Designer.cs">
+      <DependentUpon>alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clock\Email.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="DataBaseClass\dataexport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBaseClass\dataexport.Designer.cs">
+      <DependentUpon>dataexport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBaseClass\DBFuncs.cs" />
+    <Compile Include="Clock\Clock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clock\Clock.designer.cs">
+      <DependentUpon>Clock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttrFrm\frmAttriQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttrFrm\frmAttriQuery.designer.cs">
+      <DependentUpon>frmAttriQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttrFrm\frmPromptGetValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttrFrm\frmPromptGetValues.designer.cs">
+      <DependentUpon>frmPromptGetValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttrFrm\frmPromptQuerying.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttrFrm\frmPromptQuerying.designer.cs">
+      <DependentUpon>frmPromptQuerying.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AttrFrm\attr.cs" />
+    <Compile Include="MapShows\export_file.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapShows\export_file.designer.cs">
+      <DependentUpon>export_file.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapShows\FrmThemeBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapShows\FrmThemeBar.designer.cs">
+      <DependentUpon>FrmThemeBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapShows\FrmThemeGraduate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapShows\FrmThemeGraduate.designer.cs">
+      <DependentUpon>FrmThemeGraduate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapShows\FrmThemePie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapShows\FrmThemePie.designer.cs">
+      <DependentUpon>FrmThemePie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapShows\frmThemeUniqueValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapShows\frmThemeUniqueValue.designer.cs">
+      <DependentUpon>frmThemeUniqueValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Figures\table1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Figures\table1.Designer.cs">
+      <DependentUpon>table1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clock\alarm.resx">
+      <DependentUpon>alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clock\Clock.resx">
+      <DependentUpon>Clock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBaseClass\dataexport.resx">
+      <DependentUpon>dataexport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttrFrm\frmAttriQuery.resx">
+      <DependentUpon>frmAttriQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttrFrm\frmPromptGetValues.resx">
+      <DependentUpon>frmPromptGetValues.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttrFrm\frmPromptQuerying.resx">
+      <DependentUpon>frmPromptQuerying.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapShows\export_file.resx">
+      <DependentUpon>export_file.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapShows\FrmThemeBar.resx">
+      <DependentUpon>FrmThemeBar.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapShows\FrmThemeGraduate.resx">
+      <DependentUpon>FrmThemeGraduate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapShows\FrmThemePie.resx">
+      <DependentUpon>FrmThemePie.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapShows\frmThemeUniqueValue.resx">
+      <DependentUpon>frmThemeUniqueValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Figures\table1.resx">
+      <DependentUpon>table1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="main\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main\App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main\20190706115353558_easyicon_net_64.ico" />
+    <Content Include="main\main.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
